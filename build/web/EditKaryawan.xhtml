@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-grid.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-grid.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-reboot.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-reboot.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-grid.min.css"/>
+<title>Sistem Infromasi Karyawan</title>
+</h:head>
+  <h:body>
+      <div class="container">
+   <center>
+   <h:form>
+    <h1>Edit Data Karyawan</h1>
+     <table>
+            <tr>
+               <td>ID Karyawan :</td>
+               <td><h:inputText required="true" requiredMessage="Masukkan ID Karyawan" value="#{EditKaryawan.IDKaryawan}" ></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Nama :</td>
+               <td><h:inputText required="true" requiredMessage="Masukkan Nama Anda" value="#{EditKaryawan.NAMA}" ></h:inputText></td>
+            </tr>
+            <tr>
+               <td>ID Profesi :</td>
+               <td><h:inputText required="true" requiredMessage="Masukkan ID Profesi" value="#{EditKaryawan.IDProfesi}"></h:inputText></td>
+            </tr>
+     </table>
+    <br></br>
+    <h:commandButton value="Update" action="#{EditKaryawan.Update_Karyawan}" class="btn btn-success">
+     <f:param name="Update_ID_karyawan" value="#{EditKaryawan.IDKaryawan}" /></h:commandButton>
+    <br></br>
+    <br></br>
+    </h:form>
+       <h:form>
+           <h:commandButton value="Kembali" action="Karyawan.xhtml" class="btn btn-info"></h:commandButton>
+       </h:form>
+       
+  </center>
+      </div>
+</h:body>
+</html>

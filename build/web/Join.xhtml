@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-grid.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-grid.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-reboot.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-reboot.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-grid.min.css"/>
+        <title>Sistem Informasi Karyawan</title>
+    </h:head>
+    <h:body>
+        <div class="container col-md-10">
+        <div class="row">
+        <div class="col-md-12">
+        <center>
+            <h2>Daftar Join</h2>
+            <h:form>
+            <h:dataTable value="#{join.get_all_join}" var="jo" width="500px" class="table table-striped table-bordered">
+                <h:outputText value="#{join.NAMA}"/>
+                <h:column>
+                  <f:facet name="header">ID Karyawan</f:facet>
+                  <h:outputText value="#{jo.IDKaryawan}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama</f:facet>
+                 <h:outputText value="#{jo.NAMA}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama Jabatan</f:facet>
+                 <h:outputText value="#{jo.NAMAJbtn}"></h:outputText>
+                </h:column>
+            </h:dataTable>
+            <br></br>
+            <br></br>
+            </h:form>
+            <h:form>
+                <h:form>
+                Kembali ke halaman utama
+                <h:commandButton value="Kembali" action="index.xhtml" class="btn btn-info"></h:commandButton>
+                </h:form>
+            </h:form>
+        </center>
+    </div>
+    </div>
+    </div>
+    </h:body>
+</html>
+
